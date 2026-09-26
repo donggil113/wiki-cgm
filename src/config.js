@@ -3,6 +3,6 @@ export const site = {
   name: '섭리 위키',
   englishName: 'SUMNI WIKI',
   domain: 'sumni.wiki',
-  repo: 'donggil113/wiki-cgm',
+  repo: 'sumniwiki/sumniwiki.github.io',
   branch: 'main',
 };

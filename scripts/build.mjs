@@ -5,6 +5,7 @@ await mkdir('dist', { recursive: true });
 await cp('index.html', 'dist/index.html');
 await cp('src', 'dist/src', { recursive: true });
 await cp('content', 'dist/content', { recursive: true });
+await cp('CNAME', 'dist/CNAME');
 // GitHub Pages의 Jekyll 처리를 끄고 파일을 그대로 배포합니다.
 await writeFile('dist/.nojekyll', '');
 

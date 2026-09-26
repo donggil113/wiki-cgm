@@ -81,8 +81,8 @@
 | `src/markdown.js` | Markdown → HTML 변환 |
 | `src/style.css` | 디자인 (다크 모드, 모바일 대응 포함) |
 
-저장소를 다른 계정(예: `sumniwiki`)으로 옮기면 `src/config.js`의 `repo` 값만 바꾸면
-편집/역사 버튼이 새 저장소를 가리킵니다.
+저장소 주소는 `src/config.js`의 `repo` 값(`sumniwiki/sumniwiki.github.io`)에서 관리하며,
+편집/역사 버튼과 대문의 GitHub 링크가 이 주소를 사용합니다.
 
 ## 로컬 실행
 
@@ -99,6 +99,7 @@ Node.js LTS만 설치되어 있으면 됩니다. 종료는 `Ctrl+C`.
 1. 저장소 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 설정합니다.
 2. `main` 브랜치에 반영되면 `Deploy website to GitHub Pages` 워크플로가 자동 배포합니다.
 3. **Settings → Pages → Custom domain**에 `sumni.wiki`를 입력하고 저장합니다.
+   저장소의 `CNAME` 파일도 빌드 결과에 자동 포함됩니다.
 4. 도메인 업체 DNS에 GitHub Pages 레코드를 등록합니다.
    - `A` 레코드(@): `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - `www`를 쓰려면 `CNAME` 레코드: `<계정명>.github.io`
