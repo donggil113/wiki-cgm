@@ -20,6 +20,7 @@ async function load(path) {
 
 // ── 레이아웃 ────────────────────────────────────────────────
 app.innerHTML = `
+  <a class="skip-link" href="#content">본문으로 바로가기</a>
   <header class="topbar">
     <button class="menu-button" aria-label="목차 열기" aria-expanded="false">☰</button>
     <a class="brand" href="#/"><span class="brand-mark">攝</span><span><strong>${site.name}</strong><small>${site.englishName}</small></span></a>
@@ -34,6 +35,14 @@ app.innerHTML = `
     <main id="content" tabindex="-1"></main>
     <aside class="toc" id="toc"></aside>
   </div>
+  <footer class="site-footer">
+    <p><strong>${site.name}</strong><span aria-hidden="true"> · </span>함께 기록하고 가꾸는 열린 지식 공간</p>
+    <nav aria-label="하단 메뉴">
+      <a href="#/overview/introduction">섭리 소개</a>
+      <a href="#/search">전체 문서</a>
+      <a href="https://github.com/${site.repo}" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </footer>
   <div class="scrim" id="scrim"></div>
 `;
 
